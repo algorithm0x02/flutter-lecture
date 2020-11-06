@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui/animation_page.dart';
 import 'package:flutter_app/ui/first_page.dart';
 //import 'package:flutter_app/navigation/first_page.dart';
 //import 'package:flutter_app/navigation/second_page.dart';
@@ -18,6 +19,8 @@ class _MainPageState extends State<MainPage> {
     FirstPage(),
     SecondPage(),
     ThirdPage(),
+    AnimationPage(),
+    HttpPage(),
     //KakaoPage(),//_pages[1]
    // SecondPage(),
   ];
@@ -29,6 +32,7 @@ class _MainPageState extends State<MainPage> {
 
       body: _pages[_index],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, //네비게이션 바 3개 이상 사용하고 싶을떄
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -41,6 +45,14 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: '홈'
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: '홈'
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.network_cell),
+              label: 'http'
           ),
         ],
         currentIndex: _index,

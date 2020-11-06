@@ -128,7 +128,7 @@ class TitleSection extends StatelessWidget {
               children: [
                 //7. 대괄호는 리스트 같은 느낌 / 많이 들어가서 대 괄호를 사용한다.
                 Text(
-                  'Oeschinen Lake Campground',
+                  'Oeschinen Lake Campground 추',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
